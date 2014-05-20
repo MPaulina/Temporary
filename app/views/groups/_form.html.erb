@@ -1,0 +1,21 @@
+<div class="groups">
+  <div class="container-fluid full-width">
+    <div class="col-sm-6">
+      <%= render 'index' %>
+    </div>
+    <div class="col-sm-6">
+      <%= form_for @group, 
+        url: yield(:url), method: yield(:method) do |f| %>
+        <div class="form">
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

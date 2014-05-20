@@ -1,0 +1,22 @@
+<div class="container-fluid full-width">
+<div>
+  <div class="style_gist">
+    <strong>Lang:</strong>
+  </div>
+
+</br>
+  
+  <%= form_tag gists_path, :method => 'get' do %>       
+  <%= (text_field_tag :search, params[:search], class:'form-control') %>
+    
+    </br>
+  
+  <div class="szukaj_style">
+    <%= submit_tag "Search", class:'btn btn-primary' %>
+  </div>
+  
+  <% end %>
+</div>
+</div>
+
+   

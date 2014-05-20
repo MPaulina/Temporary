@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Group Name</th>
+  </tr>
+  <% for group in @groups %>
+    <tr>
+      <td><%= group.id %></td>
+      <td><%= group.name %></td>
+      <td><%= link_to "Edit", edit_group_path(group) %></td>
+      <td><%= link_to "Delete", group_path(group), 
+        data: { confirm: "Are you sure You want to delete this group?" }, 
+        method: :delete %></td>
+    </tr>
+  <% end %>
+</table>

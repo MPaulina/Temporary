@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MyGist</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <div class="col-sm-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">Gists</h2>
+      </div>
+
+      <div id="user-widget">
+        <% if current_user %>
+          Welcome <strong><%= current_user.name %></strong>!
+          <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %>
+          <%= link_to "Sign in with GitHub", "/auth/github", id: "sign_in" %>
+          <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+        <% end %>
+      </div>
+      <div class="variables">
+        <div class="variable1">a</div>
+        <div class="variable2">b</div>
+        <div class="variable3">c</div>
+        <div class="variable4">d</div>
+      </div>
+      <div class="panel-body">
+        <%= link_to "New gist", new_gist_path, class: "list-group-item" %>
+        <%= link_to "All gists", gists_path, class: "list-group-item" %>
+        <%= link_to "Search gists", searchgist_path, class: "list-group-item" %>
+        <% if current_user %>
+          <%= link_to "New Group", new_group_path, class: "list-group-item" %>
+        <% end %>
+      </div>
+
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

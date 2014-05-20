@@ -1,0 +1,104 @@
+@import "bootstrap";
+
+.variables {
+  position: absolute;
+  top: 50px;
+}
+
+html {
+	background-color: 	#ff9933;
+}
+
+th {
+	text-align: center;
+}
+
+strong {
+	font-size: 18px;
+}
+
+.alert {
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.col-sm-4 {
+	padding-left: 70px;
+  	padding-bottom: 30px;
+  	padding-right: 70px;
+	padding-top: 70px;
+	width: 100%;
+}
+
+.panel-title {
+	text-align: center;
+	font-size: 40px;
+}
+
+.container {
+	padding-top: 50px;
+}
+
+.panel-heading {
+	width: 100%;
+}
+
+.panel-body {
+	width: 100%;
+	text-align: center;
+}
+
+.new_gist {
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+}
+
+.edit_gist {
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+}
+
+.show_gists {
+	text-align: center;
+	font-size: 18px;
+	border: solid;
+	border-radius: 5px;
+	border-width: 2px;
+	border-color: #0066ff;
+	background-color: #ffffcc;
+	width: 98%;
+}
+
+.list-group-item {
+	font-size: 20px;
+}
+
+.gists {
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+}
+
+.btn {
+	width: 80px;
+}
+
+.style_gist {
+	font-size: 18px;
+	text-align: center;
+}
+
+.szerokosc {
+	width: 100%;
+}
+
+.szukaj_style {
+	text-align: center;
+}
+
+.polozenie {
+	margin-right: 25px;
+}

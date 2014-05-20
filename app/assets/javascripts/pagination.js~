@@ -1,0 +1,23 @@
+function add_more_stores() {
+  var pagination = $('.pagination');
+  if(pagination.hasClass('loading')) {
+    return;
+  }
+  pagination.addClass('loading');
+  var nextPageButton = $('.pagination .current').removeClass('current').next('a:not(.next_page)');
+  if(nextPageButton.length) {
+    nextPageButton.addClass('current').click();
+    $.fancybox.showActivity();
+  }
+}
+
+
+$(document).ready(function(){
+  $(document).on('scroll', function() {
+    var scrollTop = $(window).scrollTop() + $(window).height();
+    var limit = $(document).height();
+    if (scrollTop > limit - 50) {
+      add_more_stores();
+    }
+  });
+});

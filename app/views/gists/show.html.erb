@@ -1,0 +1,47 @@
+<div class="container-fluid full-width">
+	<div class="gists">
+
+		<div class="alert">
+			<% if notice %>
+    		<p class="alert alert-info"><%= notice %></p>
+			<% end %>
+		</div>
+
+		<div class="szerokosc">		
+			<div class="style_gist">
+  			<strong>Snippet:</strong>
+				</br></br>
+				<%= raw Pygments.highlight(@gist.snippet) %>
+			</div>
+
+			<div class="style_gist">
+  		  <strong>Lang:</strong>
+  		  <%= @gist.lang %>
+			</div>
+
+			</br>
+
+			<div class="style_gist">
+  			<strong>Description:</strong>
+  			<%= @gist.description %>
+			</div>
+
+      </br>
+
+      <div class="style_gist">
+        <strong>Group:</strong>
+        <% if @gist.group %>
+          <%= @gist.group.name %>
+        <% else %>
+          None
+        <% end %>
+      </div>
+      
+      </br></br>
+      <% if current_user %>
+			  <%= link_to 'Edit', edit_gist_path(@gist), :class=>"btn btn-primary" %>
+      <% end %>
+			</br></br>
+		</div>
+	</div>
+</div>
