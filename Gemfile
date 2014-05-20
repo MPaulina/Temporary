@@ -28,9 +28,11 @@ end
 
 group :production do
 gem 'pg', '0.15.1'
+  gem 'shelly-dependencies'
   gem 'rails_12factor', '0.0.2'
 end
 
+gem 'puma'
 gem 'bootstrap-sass'
 gem 'will_paginate', '~> 3.0.5'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
